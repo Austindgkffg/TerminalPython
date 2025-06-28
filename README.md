@@ -1,3 +1,4 @@
+![function-calling-diagram-steps](https://github.com/user-attachments/assets/6bccdd11-a87e-4b79-85d9-1a43e11005ea)
 TerminalPython
 ==============
 
