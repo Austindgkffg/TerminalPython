@@ -60,25 +60,25 @@ while readser == 1:
             readser = 0
             print(hello.rstrip())
             print("Type in a 2 digit Bank Address - Press Enter")
-            writedata = raw_input()
+            writedata = input()
             if len(writedata) == 2:
                 ser.write(writedata)
                 readser = 1
             else:
                 print("Please re-enter the 2 digit hex Bank Address and press enter")
-                writedata = raw_input()
+                writedata = input()
                 readser = 1
         elif hello.endswith(':'): 
             readser = 0
             print(hello.rstrip())
             print("Type in a 4 digit Address - Press Enter")
-            writedata = raw_input()
+            writedata = input()
             if len(writedata) == 4:
                 ser.write(writedata)
                 readser = 1
             else:
                 print("Please re-enter the 4 digit hex address and press enter")
-                writedata = raw_input()
+                writedata = input()
                 readser = 1	
         else:
             print(hello.rstrip())
