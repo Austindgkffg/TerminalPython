@@ -6,7 +6,7 @@
 ## Removed extra linefeeds from output
 ##import serial lib
 ##import msvcrt
-import serial
+import serial # type: ignore
 import io
 import time
 
@@ -84,5 +84,7 @@ while readser == 1:
             print(hello.rstrip())
 
 ##close serial connection
+ser.close()
+print("Closing out!")
 ser.close()
 print("Closing out!")
