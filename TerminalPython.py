@@ -6,7 +6,7 @@
 ## Removed extra linefeeds from output
 ##import serial lib
 ##import msvcrt
-import serial # type: ignore
+
 import io
 import time
 
@@ -27,6 +27,12 @@ except ImportError:
         finally: 
             termios.tcsetattr(fd, termios.TCSADRAIN, old_settings) 
             return ch
+
+try:
+    import serial
+except ImportError:
+    print("Error: The 'pyserial' package is not installed. Please install it with 'pip install pyserial'.")
+    exit(1)
 
 ##open serial port
 print("Welcome to WDC's 65xx Serial Monitor in Python")
